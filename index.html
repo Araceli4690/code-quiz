@@ -10,6 +10,33 @@
 </head>
 
 <body>
+    <header class='header'>
+        <button class='btn'>View high Scores</button>
+        <h4 id="countdown">Time: 40</h4>
+    </header>
+    <main class="page-content" id='start-page'>
+        <h1>Coding Quiz!</h1>
+        <p>Try to answer the following coding-related questions within the time limit. At the end add your score to the
+            high scores list and view the scores on the top left button.</p>
+        <button id="start">Start</button>
+    </main>
+    <div class="page-content" id="quiz-page">
+        <h2>Question</h2>
+        <button id='a' onClick="checkAnswer('a')">A</button>
+        <div id='result'></div>
+    </div>
+    <div id="end-page">
+        <h2 id='result'>Final Score: </h2>
+        <form class="page-content">
+
+            <div class='form-group'>
+                <input type='text' name='score-name' placeholder="Enter name" />
+            </div>
+            <div class='form-group'>
+                <button>submit</button>
+            </div>
+        </form>
+    </div>
     <script src="./assets/js/script.js"></script>
 </body>
 

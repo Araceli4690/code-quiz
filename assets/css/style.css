@@ -1,0 +1,22 @@
+.header{
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 50px 50px 10px;
+}
+
+.btn{
+    outline: none;
+    border: none;
+    background-color: white;
+}
+
+.page-content{
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 25px auto;
+    width: 50%;
+  }

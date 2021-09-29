@@ -21,9 +21,13 @@
         <button id="start">Start</button>
     </main>
     <div class="page-content" id="quiz-page">
-        <h2>Question</h2>
+        <h2 id='questions'>Question</h2>
         <button id='a' onClick="checkAnswer('a')">A</button>
-        <div id='result'></div>
+        <button id='b' onClick="checkAnswer('b')">B</button>
+        <button id='c' onClick="checkAnswer('c')">C</button>
+        <button id='d' onClick="checkAnswer('d')">D</button>
+        <hr id="lineBreak" style="display: none" class="mt-4">
+        <p id="answerCheck" style="display: none;"></p>
     </div>
     <div id="end-page">
         <h2 id='result'>Final Score: </h2>

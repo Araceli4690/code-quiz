@@ -11,7 +11,7 @@
 
 <body>
     <header class='header'>
-        <button class='btn'>View high Scores</button>
+        <button class='btn' id='viewScores'>View high Scores</button>
         <h4 id="countdown">Time: 40</h4>
     </header>
     <main class="page-content" id='start-page'>
@@ -40,6 +40,20 @@
                 <button id='submit-score'>submit</button>
             </div>
         </form>
+    </div>
+    <div class="page-content" id='scores-page'>
+        <h1>High Scores</h1>
+        <table style='width: 80%'>
+            <tr>
+                <td>Name</td>
+                <td>Score</td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>Score</td>
+            </tr>
+        </table>
+        <button id="homePage">Home</button>
     </div>
     <script src="./assets/js/script.js"></script>
 </body>

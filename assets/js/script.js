@@ -5,10 +5,13 @@ let startPage = document.getElementById('start-page');
 let quizPage = document.getElementById('quiz-page');
 let endPage = document.getElementById('end-page');
 let questionsEl = document.getElementById('questions');
-var buttonA = document.getElementById("a");
-var buttonB = document.getElementById("b");
-var buttonC = document.getElementById("c");
-var buttonD = document.getElementById("d");
+let buttonA = document.getElementById("a");
+let buttonB = document.getElementById("b");
+let buttonC = document.getElementById("c");
+let buttonD = document.getElementById("d");
+let formEl = document.querySelector('#submit-score')
+
+let highScore = [];
 let score = 0;
 let correctAns = 0;
 let questionIndex = 0;
@@ -81,7 +84,6 @@ function countdown() {
 //generate the quiz questiond
 function quizQuestions() {
 
-
     questionsEl.innerHTML = "<h2>" + questions[questionIndex].q + "</h2>";
     buttonA.innerHTML = questions[questionIndex].A;
     buttonB.innerHTML = questions[questionIndex].B;
@@ -108,11 +110,30 @@ function checkAnswer(answer) {
     } else {
         endQuiz();
     }
+    //checking if score is being calculated
+    console.log(correctAns);
+    //saving score 
+    localStorage.setItem('scores', correctAns);
 }
 
 //endquiz function
 //when questions or timer ends redirect to end-page
 function endQuiz() {
+    event.preventDefault();
+    //dispaly endPage but not other pages
+    quizPage.style.display = "none";
+    startPage.style.display = "none";
+    endPage.style.display = "block";
+
+    //displaying final score
+    document.querySelector('#result').textContent = 'Your final score is ' + correctAns + '/' + questions.length;
+
+    let nameInput = document.querySelector("#name").value;
+
+    //save to local storage
+    localStorage.setItem('name', nameInput);
+
+
 
 }
 
@@ -125,7 +146,9 @@ function startQuiz() {
     endPage.style.display = "none";
 }
 
-//event listener to submitting high score
+
 //event listener for looking at high scores
 startPage.addEventListener('click', countdown);
 startQuiz();
+//event listener to submitting high score
+formEl.addEventListener('click', endQuiz);

@@ -7,52 +7,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code-Quiz</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header class='header'>
-        <button class='btn' id='viewScores'>View high Scores</button>
-        <h4 id="countdown">Time: 40</h4>
+        <button class='button' id='viewScores'>View high Scores</button>
+        <h4 id="countdown">Time: 60</h4>
     </header>
     <main class="page-content" id='start-page'>
         <h1>Coding Quiz!</h1>
-        <p>Try to answer the following coding-related questions within the time limit. At the end add your score to the
+        <p>Try to answer the following coding-related questions within the time limit. At the end add your score and
+            initials to the
             high scores list and view the scores on the top left button.</p>
-        <button id="start">Start</button>
+        <button class='btn' id="start">Start</button>
     </main>
     <div class="page-content" id="quiz-page">
         <h2 id='questions'>Question</h2>
-        <button id='a' onClick="checkAnswer('a')">A</button>
-        <button id='b' onClick="checkAnswer('b')">B</button>
-        <button id='c' onClick="checkAnswer('c')">C</button>
-        <button id='d' onClick="checkAnswer('d')">D</button>
+        <div class='question-content'>
+            <button class='btn' id='a' onClick="checkAnswer('a')">A</button>
+
+            <button class='btn' id='b' onClick="checkAnswer('b')">B</button>
+
+            <button class='btn' id='c' onClick="checkAnswer('c')">C</button>
+
+            <button class='btn' id='d' onClick="checkAnswer('d')">D</button>
+        </div>
         <hr id="lineBreak" style="display: none" class="mt-4">
         <p id="answerCheck" style="display: none;"></p>
     </div>
-    <div id="end-page">
+    <div id="end-page" class='page-content'>
         <h2 id='result'>Your final Score is: </h2>
-        <form class="page-content">
+        <form>
 
             <div class='form-group'>
                 <input type='text' name="score-name" placeholder="Enter name" id='name' />
             </div>
             <div class='form-group'>
-                <button id='submit-score'>submit</button>
+                <button class='btn' id='submit-score'>submit</button>
             </div>
         </form>
     </div>
     <div class="page-content" id='scores-page'>
         <h1>High Scores</h1>
-        <table style='width: 80%'>
-            <tr>
-                <td>Name</td>
-                <td>Score</td>
-            </tr>
-            <tr>
-                <td>Name</td>
-                <td>Score</td>
-            </tr>
-        </table>
+        <div id='listOfScores' style='width: 80%'>
+            <p></p>
+        </div>
         <button id="homePage">Home</button>
     </div>
     <script src="./assets/js/script.js"></script>

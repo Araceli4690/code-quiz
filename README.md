@@ -24,7 +24,7 @@ If you would like to run the application from your desktop simply `clone` the co
 The app was deployed on [Github](https://github.com/) and can be viewed at the following link
 https://araceli4690.github.io/code-quiz/
 
-![](./assets/code-quiz.gif)
+![](/assets/code-quiz.gif)
 
 ## Contact
 If you have any questions feel free to contact me through my [Github](https://github.com/Araceli4690).

@@ -172,7 +172,7 @@ function endQuiz() {
 }
 
 function saveScore() {
-
+    event.preventDefault();
     let nameInput = document.querySelector("#name").value;
 
     // store scores into local storage
